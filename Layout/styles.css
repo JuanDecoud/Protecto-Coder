@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Days One', sans-serif;
+    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.font{
+    
+    font-weight: bold;
+}
+
+
+html, body {
+    height: 91%;
+    background-color: rgb(184, 181, 181)
+  }
+
+
+.form-control-sm:focus{
+    border: 2px solid white;
+    outline: 3px solid rgb(139, 135, 135);
+}
+
+.form-select-sm:focus{
+    border: 2px solid white;
+    outline: 3px solid rgb(139, 135, 135);
+}
+
+
+
+.w15{
+    width: 10%;
+}
+
+.bgbeige{
+    background-color: rgba(232, 195, 158);
+}
+
+.bgcielo{
+    background-color: rgba(189, 223, 237, 0.8);
+}
+
+
+.imagenFondo {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+ 
+}  
+
+
+.progress-bar {
+        
+    width: 368px;
+    
+}
+
+
+
+.tarjetaTanque{
+    width: 450px;
+    height: 100%;
+
+}
+
+.w65{
+    width: 67%;
+}
+
+.buque {
+    transform: translate(0,20px);
+}
+
+.muelle {
+    transform: translate(872px,20px);
+}
+
+.camion {
+    transform: translate(1300px,14px);
+}
+
+.btncargar {
+    transform: translate(1760px,-300px);
+}
+
+
+.borderd {
+    
+   
+    border-top-style: dashed;
+    color: yellow;
+}
+.h100 {
+    height: 100%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+
+.login {
+    top: 55%;
+    left: 78%;
+    transform: translate(-55%, -78%);
+    height: 400px;
+    background-color: rgba(63,96,124,255);
+    opacity: 0.90;
+    
+    
+}

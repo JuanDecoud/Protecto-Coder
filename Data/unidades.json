@@ -1,0 +1,79 @@
+[
+
+    {
+        "codigoUnidad":{
+            "patenteTractor":"AD947DI", 
+            "patenteSemi":"JNW 769",
+            "cisterNado":[10,5,5,4,5,7],  
+            "codigoUnidad":"3" 
+        },
+        
+        "nombre":"Fabian",
+        "apellido":"Flores",
+        "dni":"25699321"
+    },
+    {
+        "codigoUnidad":{
+            "patenteTractor":"AE462JH", 
+            "patenteSemi":"JPO 135",
+            "cisterNado":[6,8,4,8,10],  
+            "codigoUnidad":"4" 
+        },
+        
+        "nombre":"Nicolas",
+        "apellido":"Sasso",
+        "dni":"2324941"
+    },
+    {
+        "codigoUnidad":{
+            "patenteTractor":"AA499SV", 
+            "patenteSemi":"AA477AU",
+            "cisterNado":[7,7,6,5,6,5],  
+            "codigoUnidad":"12" 
+        },
+        
+        "nombre":"Walter",
+        "apellido":"Boggon",
+        "dni":"35410517"
+    },
+    {
+        "codigoUnidad":{
+            "patenteTractor":"AE96XY", 
+            "patenteSemi":"AE751UK",
+            "cisterNado":[7,7,5,5,6,6,6],  
+            "codigoUnidad":"7" 
+        },
+        
+        "nombre":"Angel",
+        "apellido":"Flores",
+        "dni":"33646534"
+    },
+    {
+        "codigoUnidad":{
+            "patenteTractor":"AE923UJ", 
+            "patenteSemi":"KOW 741",
+            "cisterNado":[11,6,9,5,5],  
+            "codigoUnidad":"19" 
+        },
+        
+        "nombre":"Walter",
+        "apellido":"Barrios",
+        "dni":"31223372"
+    },
+    {
+        "codigoUnidad":{
+            "patenteTractor":"MOC 418", 
+            "patenteSemi":"JEO 299",
+            "cisterNado":[10,6,6,6,6],  
+            "codigoUnidad":"28" 
+        },
+        
+        "nombre":"Sergio",
+        "apellido":"Acuña",
+        "dni":"44321244"
+    }
+  
+  
+ 
+
+]

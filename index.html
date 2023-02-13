@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Layout/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Layout/styles.css">
+    <link rel="stylesheet" href="/Librerias/Alertify/css/alertify.min.css" />
+    <link rel="stylesheet" href="/Librerias/Alertify/css/themes/default.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Hammersmith+One&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <title>Main</title>
+</head>
+
+<body >
+
+    <div class = "container-fluid h100 w100   " id="contenedorPrincipal">
+      <div class ="d-inline-flex bgbeige  col-12 shadow-sm  rounded mt-2 border border-2 rounded  ">
+        <img  class ="blanco mx-2 p-1" src="/Pictures/embarcacion.png" alt="" class ="mx-4 mt-2 mb-2">
+      </div>
+        <div class = "d-inline-flex  h100 w100  " >
+          <div class="d-flex flex-column align-items-start w15 shadow-sm p-3 mb-5   rounded border border-2 bgbeige h100" >
+              <div class = "d-inline-flex justify-content-around col-10 my-4 border-bottom border-dark ">
+                <img  src="/Pictures/menu.png" alt="" class ="my-2">
+                <h4 class = "mx-2 my-2  font">Menu</h4>
+              </div>
+              <div class="nav flex-column nav-pills  mx-auto" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="btn btn-lg btn-sm btn-dark font my-2 active" id="btnGENERAL" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="false">General </button>
+                <button class="btn btn-lg btn-sm btn-dark font my-2" id="ingresarPedido" data-bs-toggle="pill" data-bs-target="#pedido" type="button" role="tab" aria-controls="pedido" aria-selected="false">Ingresar Pedidos</button>
+                <button class="btn btn-lg btn-sm btn-dark font  my-2" id="vistaPedidos" data-bs-toggle="pill" data-bs-target="#tablaPedidos" type="button" role="tab" aria-controls="tablaPedidos" aria-selected="false">Pedidos</button>
+                <button class="btn btn-lg btn-sm btn-dark font my-2" id="btnBusqueda" data-bs-toggle="pill" data-bs-target="#busquedas" type="button" role="tab" aria-controls="busquedas" aria-selected="false">Busqueda</button>
+              </div>
+          </div>
+          <div id ="content" class = "text-black shadow-sm p-3 mb-5 bgbeige h100 rounded border border-2 container-fluid mx-2 w65"  >
+              <div id = "formulario" class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active " id="general" role="tabpanel" aria-labelledby="v-pills-profile-tab" >
+                    <div class="container mt-2">
+                      
+                      <img src="/Pictures/grafico-de-barras.png" alt="">
+                      <span class = " mx-2 h4 font">Estadisticas</span>
+                      <div class="row g-4 mt-4">
+                        <div class="col-6">
+                          <div class="  shadow-sm  rounded border border-3  bg-secondary text-white ">
+                            <label class ="mx-2 mt-1 text-dark h5 font" for=""><img src="/Pictures/ventas.png" alt="">Ventas</label>
+                            <p  id ="ventasTotales" class = "h3 text-center text-white font"></p> 
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class=" shadow-sm  rounded border border-3  bg-secondary text-white ">
+                            <label class ="mx-2 text-dark h5 mt-1 font" for=""><img src="/Pictures/promedio.png" alt=""> Promedio Ventas</label>
+                            <p  id ="promedioVentas" class = "h3 text-center text-white font"></p> 
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class=" shadow-sm  rounded border border-3 bg-secondary text-white ">
+                            <label  class ="mx-2 text-dark h5 mt-1 font" for=""><img src="/Pictures/dinero.png" alt=""> Ingresos</label>
+                            <p id="Ingresos" class  = "h3 text-center text-white font"></p> 
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class=" shadow-sm   rounded border border-3 bg-secondary text-white">
+                            <label class ="mx-2 text-dark h5 mt-1 font" for=""><img class="mx-2" src="/Pictures/camion.png" alt="">Nro Despachos</label>
+                            <p id ="nroDespachos" class = "h3 text-center text-white font"></p> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane col-12" id="pedido" role="tabpanel" aria-labelledby="ingresarPedido">
+                    
+
+                  </div>
+                  <div class="tab-pane fade" id="tablaPedidos" role="tabpanel" aria-labelledby="vistaPedidos">
+                    <h2 class ="font"><span><img class="mx-2" src="/Pictures/pedido.png" alt=""></span> Pedidos Diarios</h2>
+                    <div class = "d-inline-flex mt-4 ">
+                      <input type="date" id="fechaDespacho" min="" class = "form-control form-control-sm col-1 mx-1 font" required>
+                      <button  id ="btnPedidosDiarios"class = "btn  btn-sm btn-outline-secondary mx-2">Seleccionar</button>
+                    </div>
+                    <div class = "container-fluid mt-4">
+                      <div class ="d-inline-flex justify-content-end align-items-center col-12 ">
+                        <div class =" d-inline-flex border border-2 rounded shadow-sm ">
+                          <p class = "h6 p-1 font">Precio Por Litro:</p>
+                          <span><p class ="h6 text-danger mx-1 p-1 font" id="precioRancho">S/A</p></span>
+                        </div>
+                        <div class ="rounded shadow-sm mx-1 p-0">
+                          <button class =" btn btn-sm btn-outline-secondary shadow-sm" data-bs-toggle="modal" data-bs-target="#vistaModificarPrecio"  id="btnCambioPrecio">
+                            <img src="/Pictures/cambio.png" class =""alt="">
+                          </button>
+
+                        </div>
+                      </div>
+                    </div>
+      
+                    <table id ="tablaPedidos" class="table table-sm table-bordered mt-4 text-center">
+                      <thead class ="table-dark">
+                        <tr>
+                          <th>Id</th>
+                          <th>Buque</th>
+                          <th>Choferes Asignados</th>
+                          <th>Cantidad</th>
+                          <th>Fecha</th>
+                          <th>Horario</th>
+                          <th>Declaracion Jurada</th>
+                          <th>Opciones</th>
+                        </tr>
+                      </thead>
+                      <tbody id ="tablaDespachosBody" class ="bg-white">
+
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane fade" id="busquedas" role="tabpanel" aria-labelledby="v-pills-profile-tab" >
+                    <h3 class = "mt-2 font"><span><img class ="mx-2 " src="/Pictures/filtrar.png" alt=""></span class="font"> Filtros</h3>
+                    <h5 class = "mt-4 font">Rango De Fechas</h>
+                      <div class="container mt-4 ">
+                          <div class="row row-cols-2">
+                              <div class="col-md-1 mt-2 text-center">
+                                <span class="font">Desde</span>
+                              </div>
+                              <div class="col-md-4 mt-2">
+                                <input type="date" id="fdesde" class = "form-control form-control-sm col-1  font mx-1 ">
+                              </div>
+                              <div class="col-md-1 mt-2 text-center">
+                                <span class="font">Hasta</span>
+                              </div>
+                              <div class="col-md-4 mt-2">
+                                <input type="date" id="fhasta" class = "form-control form-control-sm font  col-1 mx-1 ">
+                              </div>
+                              <div class ="col-md-2 mt-2">
+                                <button  id ="btnFiltrarxFecha" class = "btn btn-sm btn-secondary">Buscar</button>
+                              </div>
+                          </div>
+                          <h5 class = "mt-5 font">Nombre de Buque</h5>
+                          <div class = "d-inline-flex mt-2">
+                            <div class="input-group input-group-sm mb-3 mt-2 ">
+                              <input id="buqueFiltro" type="text" class ="form-control form-control-sm font">
+                            </div>
+                            <div class ="container">
+                              <button id ="btnFiltrarxBuque" class = "btn btn-sm btn-secondary mx-2 my-2">Buscar</button>
+                            </div>
+                           
+                          </div>
+                          <table id ="tablaPedidos" class="table table-sm  table-bordered mt-4 p-0 text-sm-center">
+                            <thead class ="table-dark">
+                              <tr>
+                                <th>Id</th>
+                                <th>Buque</th>
+                                <th>Choferes Asignados</th>
+                                <th>Cantidad</th>
+                                <th>Fecha</th>
+                                <th>Horario</th>
+                                <th>Declaracion Jurada</th>
+                              </tr>
+                            </thead>
+                            <tbody id ="tablaBodyFiltros">
+      
+                            </tbody>
+                          </table>
+                    </div>
+              </div>
+          </div>
+      </div>
+      <div class = "d-flex flex-column  bgbeige rounded border border-2 shadow-sm    tarjetaTanque">
+        <div class ="d-inline-flex col-12 justify-content-center my-5 ">
+          <img src="/Pictures/barril.png" alt="" class ="mx-2 my-2">
+          <h4 class ="p-1 font my-2">Tanque De Combustible</h4>
+        </div>
+        <div class="progress col-10 mx-auto  rounded-pill border border-4 border-dark  " style="height:225px">
+            <div  id ="tanqueBar" class="progress-bar  bg-danger font" role="progressbar" aria-label="Success example"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="476" >
+              100.000 lts
+            </div>
+        </div>
+        <button class ="btn btn-secondary btn-sm col-2 mt-4 mx-4 font " id="btnCargar">
+          Cargar
+        </button>
+      </div>
+  </div>
+  <div class ="d-inline-flex bg-dark border border-2  rounded border-white mb-2 mt-1 w-100">
+    <img  class ="p-1"src="/Pictures/image (1).png" alt="">
+    <p class ="text-white mx-auto mt-4">CopyRight © - Juan Jose Decoud</p>
+ </div>
+   
+    </div>
+  </div>
+  
+    <div id = "modalsDespacho">
+        <div class="modal fade" id="vistaModificarPrecio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" >
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Asignar Precio</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <input  id = "valorPrecio" type="numero" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button  id="btnNuevoPrecio" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cambiar</button>
+              </div>
+              </div>
+          </div>
+       </div>
+    </div>
+
+
+
+<script src="/Layout/js/bootstrap.bundle.js"></script>
+<script type="module" src="/Controllers/PedidoController.js"></script>
+<script type="module" src="/Controllers/DespachoController.js"></script>
+<script type="module" src="/Data/Unidades.js"></script>
+<script src="/Librerias/Alertify/alertify.min.js"></script>
+<script type="module" src="/Controllers/Estadisticas.js"></script>
+<script type="module" src="/Controllers/Filtros.js"></script>
+<script src="/Librerias/luxon.js"></script>
+<script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="/node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+
+
+    
+</body>
+</html>
